@@ -17,7 +17,6 @@ import psutil
 import pydantic
 import requests
 import uvicorn
-import uvloop
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import Response, StreamingResponse
 from pydantic import BaseModel
@@ -54,7 +53,6 @@ from sglang.srt.managers.tokenizer_manager import TokenizerManager
 from sglang.srt.server_args import PortArgs, ServerArgs
 from sglang.srt.utils import handle_port_init
 
-asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
 
 
 app = FastAPI()
