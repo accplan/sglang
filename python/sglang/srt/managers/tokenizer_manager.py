@@ -7,7 +7,6 @@ from typing import List
 
 import numpy as np
 import transformers
-import uvloop
 import zmq
 import zmq.asyncio
 from sglang.srt.hf_transformers_utils import (
@@ -28,7 +27,6 @@ from sglang.srt.sampling_params import SamplingParams
 from sglang.srt.server_args import PortArgs, ServerArgs
 from sglang.srt.utils import get_exception_traceback, is_multimodal_model, load_image
 
-asyncio.set_event_loop_policy(uvloop.EventLoopPolicy())
 
 
 @dataclasses.dataclass
