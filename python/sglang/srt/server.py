@@ -483,7 +483,7 @@ def launch_server(server_args, pipe_finish_writer):
             port=server_args.port,
             log_level=server_args.log_level,
             timeout_keep_alive=5,
-            loop="uvloop",
+            loop="asyncio",
         )
 
     def _wait_and_warmup():
